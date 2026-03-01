@@ -7,15 +7,8 @@ ollama = OpenAI(base_url=OLLAMA_BASE_URL, api_key="ollama")
 
 
 # Model response using llama3 model with a simple prompt.
-# response = ollama.chat.completions.create(
-#     model="llama3", messages=[
-#         {"role": "user", "content": "Tell me a fun fact."}])
-
-# print(response.choices[0].message.content)
-
-# Model response using deepseek model with a simple prompt.
 response = ollama.chat.completions.create(
-    model="deepseek-r1:1.5b", messages=[
+    model="llama3", messages=[
         {"role": "user", "content": "Tell me a fun fact."}])
 
 print(response.choices[0].message.content)
